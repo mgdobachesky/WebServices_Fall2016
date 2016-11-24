@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49756/NEITStoreOrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Midterm_pt2a" />
+  <xs:element name="ReturnAmountEarned">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="balance" type="xs:double" />
+        <xs:element minOccurs="0" name="interest" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnAmountEarnedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReturnAmountEarnedResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Midterm_pt2a" minOccurs="0" name="GetBankInformationResult" nillable="true" type="q1:accountInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+﻿body {
+
+}
+
+.spacer {
+    width: 5em;
+}
+
+.artistBio{
+	max-height: 20em;
+	overflow: auto;
+    white-space: pre-line;
+}
+
+.lyrics {
+    white-space: pre-line;
+}
+
+.navRight {
+    margin-top: .20em;
+    margin-right: .80em;
+}
+
+.center {
+    text-align: center;
+}
+
+.inline-block {
+    display: inline-block;
+}
