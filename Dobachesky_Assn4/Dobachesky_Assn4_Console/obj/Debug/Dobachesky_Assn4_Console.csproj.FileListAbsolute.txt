@@ -1,0 +1,6 @@
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\bin\Debug\Dobachesky_Assn4_Console.exe.config
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\bin\Debug\Dobachesky_Assn4_Console.exe
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\bin\Debug\Dobachesky_Assn4_Console.pdb
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\obj\Debug\Dobachesky_Assn4_Console.csprojResolveAssemblyReference.cache
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\obj\Debug\Dobachesky_Assn4_Console.exe
+C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Assn4\Dobachesky_Assn4_Console\obj\Debug\Dobachesky_Assn4_Console.pdb

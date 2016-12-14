@@ -1,0 +1,39 @@
+<contacts>
+	<versionDate>10/05/2016</versionDate>
+	<versionNumber>1.0.0.0</versionNumber>
+	<contact sex="male">
+		<firstName>Michael</firstName>
+		<lastName>Dobachesky</lastName>
+		<phoneNumber>5081231234</phoneNumber>
+		<faxNumber>N/A</faxNumber>
+		<emailAddress>mgdobachesky@email.neit.edu</emailAddress>
+	</contact>
+	<contact sex="female">
+		<firstName>Sarah</firstName>
+		<lastName>Ville</lastName>
+		<phoneNumber>5081231234</phoneNumber>
+		<faxNumber>1234567894</faxNumber>
+		<emailAddress>sarah@email.com</emailAddress>
+	</contact>
+	<contact sex="male">
+		<firstName>Joe</firstName>
+		<lastName>Person</lastName>
+		<phoneNumber>5081231234</phoneNumber>
+		<faxNumber>N/A</faxNumber>
+		<emailAddress>joe@someplace.com</emailAddress>
+	</contact>
+	<contact sex="male">
+		<firstName>Jim</firstName>
+		<lastName>Language</lastName>
+		<phoneNumber>5086543214</phoneNumber>
+		<faxNumber>6543216547</faxNumber>
+		<emailAddress>jim@website.com</emailAddress>
+	</contact>
+	<contact sex="female">
+		<firstName>Sally</firstName>
+		<lastName>Another</lastName>
+		<phoneNumber>5086546541</phoneNumber>
+		<faxNumber>N/A</faxNumber>
+		<emailAddress>sally@webworld.com</emailAddress>
+	</contact>
+</contacts>
