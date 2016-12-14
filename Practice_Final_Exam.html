@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <title></title>
  
 <script type="text/javascript">
 
-var url = 'http://54.84.69.209/jsonbankservice/BankAccounts/GetBankInformation';
+var url = 'http://54.84.69.209/jsonfootballservice/footballteams/getfootballteam';
 // Cross platform xmlhttprequest
 
 // Create xmlhttprequest object
@@ -27,19 +27,17 @@ xmlhttp.open('GET', url, true);
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
        var myObj = JSON.parse(xmlhttp.responseText);
-	   var owner = document.getElementById("owner");
-	   var accountId = document.getElementById("accountId");
-	   var totalAmount = document.getElementById("totalAmount");
-	   
-	   var amount = 0;
-	   for(var i = 0; i < myObj.accounts.length; i++) {
-			amount += myObj.accounts[i].Amount;
-	   }
-	   
-	   owner.innerHTML = myObj.OwnerName;
-	   accountId.innerHTML = myObj.AccountID;
-	   totalAmount.innerHTML = amount;
-		   
+	   var footballTable = document.getElementById("footballTable");
+		   var tableRow = footballTable.insertRow(-1);
+		   var tableData = tableRow.insertCell(0);
+		   tableData.innerHTML = myObj.TeamName;
+		   for (var i = 0; i < myObj.roster.length; i++) {
+				if(myObj.roster[i].weight > 250) {
+					var tableRow = footballTable.insertRow(-1);
+					var tableData = tableRow.insertCell(0);
+					tableData.innerHTML = myObj.roster[i].name + "-" + myObj.roster[i].weight;
+				}
+		   }
     } else {
         // waiting for the call to complete
     }
@@ -51,19 +49,7 @@ xmlhttp.send(null);
 </script>
 </head>
 <body>
-	<table id="finalTable" border="1px solid black">
-		<tr>
-			<td>Owner</td>
-			<td id="owner"></td>
-		</tr>
-		<tr>
-			<td>Account ID</td>
-			<td id="accountId"></td>
-		</tr>
-		<tr>
-			<td>Total Amount</td>
-			<td id="totalAmount"></td>
-		</tr>
+	<table id="footballTable" border="1px solid black">
 	</table>
 </body>
 </html>
