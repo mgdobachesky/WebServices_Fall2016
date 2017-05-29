@@ -52,7 +52,7 @@ namespace Dobachesky_FinalProject
             XPathNodeIterator nodeIterator;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string albumId = "";
             if (Session["albumId"] != null)
             {
@@ -61,7 +61,7 @@ namespace Dobachesky_FinalProject
 
             //create musixmatch api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=" + albumId + "&page=" + pageNumber + "&page_size=10&apikey=" + musixmatchApiKey + "&format=xml&f_has_lyrics=1";
-            
+
             try
             {
                 //create and deploy an http request to defined url
@@ -84,7 +84,7 @@ namespace Dobachesky_FinalProject
                 //create a node iterator to go through each item in the document
                 nodeIterator = myNavigator.Select("//track");
 
-                //clear table 
+                //clear table
                 tblTracks.Rows.Clear();
 
                 //append required information to table
@@ -147,7 +147,7 @@ namespace Dobachesky_FinalProject
             XPathDocument myDocument;
 
             //prepare required lastfm api data
-            string lastFmApiKey = "eb771d0706bad3455c555dc8b00f4235";
+            string lastFmApiKey = "[API_KEY]";
             string artistName = "";
             string albumName = "";
             if (Session["artistName"] != null)
@@ -161,7 +161,7 @@ namespace Dobachesky_FinalProject
 
             //create lastfm api url from collected data
             string url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&artist=" + artistName + "&album=" + albumName + "&api_key=" + lastFmApiKey;
-            
+
             try
             {
                 //create and deploy an http request to defined url

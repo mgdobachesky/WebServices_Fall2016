@@ -52,7 +52,7 @@ namespace Dobachesky_FinalProject
             XPathNodeIterator nodeIterator;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string artistId = "";
             if (Session["artistId"] != null)
             {
@@ -61,7 +61,7 @@ namespace Dobachesky_FinalProject
 
             //create musixmatch api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=" + artistId + "&page=" + pageNumber + "&page_size=10&apikey=" + musixmatchApiKey + "&format=xml&s_release_date=desc&g_album_name=1";
-            
+
             try
             {
                 //create and deploy an http request to defined url
@@ -87,7 +87,7 @@ namespace Dobachesky_FinalProject
                 //create a node iterator to go through each item in the document
                 nodeIterator = myNavigator.Select("//album");
 
-                //clear table 
+                //clear table
                 tblAlbums.Rows.Clear();
 
                 //append required information to table
@@ -124,7 +124,7 @@ namespace Dobachesky_FinalProject
             {
                 Response.Redirect("/home");
             }
-            
+
         }
 
         private void lastFmApi()
@@ -137,7 +137,7 @@ namespace Dobachesky_FinalProject
             XPathDocument myDocument;
 
             //prepare required lastfm api data
-            string lastFmApiKey = "eb771d0706bad3455c555dc8b00f4235";
+            string lastFmApiKey = "[API_KEY]";
             string artistName = "";
             if (Session["artistName"] != null)
             {
@@ -146,7 +146,7 @@ namespace Dobachesky_FinalProject
 
             //create lastfm api url from collected data
             string url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artistName + "&api_key=" + lastFmApiKey;
-            
+
             try
             {
                 //create and deploy an http request to defined url

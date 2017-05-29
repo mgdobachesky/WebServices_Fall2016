@@ -58,9 +58,9 @@ namespace Dobachesky_FinalProject
             XPathNodeIterator nodeIterator;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string genreId = "";
-            
+
             //get the genreId from the query string
             if (Request.QueryString["genreId"] != null && Request.QueryString["genreId"] != "")
             {
@@ -73,7 +73,7 @@ namespace Dobachesky_FinalProject
 
             //create musixmatch api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/track.search?s_track_rating=desc&s_artist_rating=desc&f_lyrics_language=en&f_has_lyrics=1&page_size=20&page=" + pageNumber + "&format=xml&apikey=" + musixmatchApiKey + "&f_music_genre_id=" + genreId;
-            
+
             try
             {
                 //create and deploy an http request to defined url
@@ -96,7 +96,7 @@ namespace Dobachesky_FinalProject
                 //create a node iterator to go through each item in the document
                 nodeIterator = myNavigator.Select("//track");
 
-                //clear table 
+                //clear table
                 tblTracks.Rows.Clear();
 
                 //append required information to table
@@ -112,11 +112,11 @@ namespace Dobachesky_FinalProject
 
                     //prepare the linkbutton to be clicked on
                     trackClick.Text = "" + track.Current.SelectSingleNode("track_name");
-                    trackClick.CommandArgument = track.Current.SelectSingleNode("artist_id") 
-                        + "," + track.Current.SelectSingleNode("album_id") + "," 
-                        + track.Current.SelectSingleNode("track_id") + "," 
-                        + track.Current.SelectSingleNode("artist_name") + "," 
-                        + track.Current.SelectSingleNode("album_name") + "," 
+                    trackClick.CommandArgument = track.Current.SelectSingleNode("artist_id")
+                        + "," + track.Current.SelectSingleNode("album_id") + ","
+                        + track.Current.SelectSingleNode("track_id") + ","
+                        + track.Current.SelectSingleNode("artist_name") + ","
+                        + track.Current.SelectSingleNode("album_name") + ","
                         + track.Current.SelectSingleNode("track_name");
                     trackClick.Command += new CommandEventHandler(lbtn_Click);
 

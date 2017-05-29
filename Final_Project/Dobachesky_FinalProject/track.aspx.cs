@@ -35,7 +35,7 @@ namespace Dobachesky_FinalProject
             XPathDocument myDocument;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string trackId = "";
             if (Session["trackId"] != null)
             {
@@ -44,7 +44,7 @@ namespace Dobachesky_FinalProject
 
             //create musixmatch api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + musixmatchApiKey + "&format=xml";
-            
+
             try
             {
                 //create and deploy an http request to defined url
@@ -84,7 +84,7 @@ namespace Dobachesky_FinalProject
             XPathDocument myDocument;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string trackId = "";
             if (Session["trackId"] != null)
             {
@@ -93,7 +93,7 @@ namespace Dobachesky_FinalProject
 
             //create lastfm api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/track.get?track_id=" + trackId + "&apikey=" + musixmatchApiKey + "&format=xml";
-            
+
             try
             {
                 //create and deploy an http request to defined url

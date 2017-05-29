@@ -44,7 +44,7 @@ namespace Dobachesky_FinalProject
             XPathNodeIterator nodeIterator;
 
             //prepare required musixmatch api data
-            string musixmatchApiKey = "74a4faf48aaa62dbbaa400179d5fc478";
+            string musixmatchApiKey = "[API_KEY]";
             string artistName = "";
             if (Request.QueryString["artistName"] != null && Request.QueryString["artistName"] != "")
             {
@@ -57,7 +57,7 @@ namespace Dobachesky_FinalProject
 
             //create musixmatch api url from collected data
             string url = "http://api.musixmatch.com/ws/1.1/artist.search?q_artist=" + artistName + "&page=" + pageNumber.ToString() + "&page_size=20&apikey=" + musixmatchApiKey + "&format=xml&s_artist_rating=desc";
-            
+
             try
             {
                 //create and deploy an http request to defined url
@@ -80,7 +80,7 @@ namespace Dobachesky_FinalProject
                 //create a node iterator to go through each item in the document
                 nodeIterator = myNavigator.Select("//artist");
 
-                //clear table 
+                //clear table
                 tblArtists.Rows.Clear();
 
                 //append artist link and details to a displayed table for each row returned
@@ -145,7 +145,7 @@ namespace Dobachesky_FinalProject
             {
                 Session["artistName"] = artistName;
             }
-            
+
             if (args != null)
             {
                 Session["albumId"] = "";
