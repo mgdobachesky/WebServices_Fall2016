@@ -1,6 +1,0 @@
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\bin\Debug\Midterm_pt2b.exe.config
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\obj\Debug\Midterm_pt2b.csprojResolveAssemblyReference.cache
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\bin\Debug\Midterm_pt2b.exe
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\bin\Debug\Midterm_pt2b.pdb
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\obj\Debug\Midterm_pt2b.exe
-C:\Users\DobacheskyMichaelG\Desktop\Dobachesky_Midterm\Midterm_pt2b\obj\Debug\Midterm_pt2b.pdb
